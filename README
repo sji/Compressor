@@ -1,0 +1,15 @@
+CSS Simple Compressor
+
+Opens a CSS file and removes all the blank lines, and lines that are only comments.
+There is a :regex mode which removes all comments (mixed with code as well) and it is possibly faster.
+
+Usage:
+require 'lib/compressor'
+
+css_compressor = CSSCompressor.new(filename)
+css_compressor.compress_to(destination_filename)
+
+or
+
+css_compressor = CSSCompressor.new(filename, :regex => true)
+css_compressor.compress_to(destination_filename)
